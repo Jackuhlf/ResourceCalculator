@@ -6,9 +6,9 @@ authors:
 
 index_page_display_name: "Minecraft"
 
-game_version: Java 1.19
+game_version: Java 1.20
 
-banner_message: "Now updated to 1.19!"
+banner_message: "Now updated to 1.20!"
 
 recipe_types:
   Crafting: "Craft {IN_ITEMS} into {OUT_ITEM}"
@@ -40,6 +40,12 @@ requirement_groups:
   - Charcoal
   - Coal
 
+  Any Cherry Log:
+  - Cherry Log
+  - Cherry Wood
+  - Stripped Cherry Log
+  - Stripped Cherry Wood
+
   Any Crimson Stem:
   - Crimson Stem
   - Crimson Hyphae
@@ -64,6 +70,8 @@ requirement_groups:
   - Acacia Wood
   - Birch Log
   - Birch Wood
+  - Cherry Log
+  - Cherry Wood
   - Crimson Hyphae
   - Crimson Stem
   - Dark Oak Log
@@ -102,6 +110,8 @@ requirement_groups:
   - Acacia Wood
   - Birch Log
   - Birch Wood
+  - Cherry Log
+  - Cherry Wood
   - Dark Oak Log
   - Dark Oak Wood
   - Jungle Log
@@ -115,6 +125,8 @@ requirement_groups:
   - Stripped Acacia Wood
   - Stripped Birch Log
   - Stripped Birch Wood
+  - Stripped Cherry Log
+  - Stripped Cherry Wood
   - Stripped Dark Oak Log
   - Stripped Dark Oak Wood
   - Stripped Jungle Log
@@ -184,7 +196,9 @@ requirement_groups:
   Any Slab:
   - Oak Slab
   - Acacia Slab
+  - Bamboo Slab 
   - Birch Slab
+  - Cherry Slab
   - Crimson Slab
   - Dark Oak Slab
   - Jungle Slab
@@ -465,7 +479,15 @@ resources:
       requirements:
         Any Acacia Log: -1
     - recipe_type: Raw Resource
-
+    
+  Cherry Planks:
+    recipes:
+    - output: 4
+      recipe_type: Crafting
+      requirements:
+        Any Cherry Log: -1
+    - recipe_type: Raw Resource
+    
   Dark Oak Planks:
     recipes:
     - output: 4
@@ -1264,6 +1286,9 @@ resources:
     recipes:
     - recipe_type: Raw Resource
 
+  Cherry Log:
+    recipes:
+    - recipe_type: Raw Resource
   Jungle Log:
     recipes:
     - recipe_type: Raw Resource
@@ -1308,6 +1333,14 @@ resources:
         Birch Log: -1
     - recipe_type: Raw Resource
 
+  Stripped Cherry Log:
+    recipes:
+    - output: 1
+      recipe_type: Strip
+      requirements:
+        Cherry Log: -1
+    - recipe_type: Raw Resource
+    
   Stripped Jungle Log:
     recipes:
     - output: 1
@@ -1468,6 +1501,14 @@ resources:
         Birch Log: -4
     - recipe_type: Raw Resource
 
+  Cherry Wood:
+    recipes:
+    - output: 3
+      recipe_type: Crafting
+      requirements:
+        Cherry Log: -4
+    - recipe_type: Raw Resource
+    
   Jungle Wood:
     recipes:
     - output: 3
@@ -1520,6 +1561,10 @@ resources:
     recipes:
     - recipe_type: Raw Resource
 
+  Cherry Leaves:
+    recipes:
+    - recipe_type: Raw Resource
+    
   Jungle Leaves:
     recipes:
     - recipe_type: Raw Resource
@@ -1659,6 +1704,15 @@ resources:
       requirements:
         String: -4
 
+  Red Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Red Dye: -1
+    - recipe_type: Raw Resource
+
   Orange Wool:
     recipes:
     - output: 1
@@ -1666,24 +1720,6 @@ resources:
       requirements:
         White Wool: -1
         Orange Dye: -1
-    - recipe_type: Raw Resource
-
-  Magenta Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Magenta Dye: -1
-    - recipe_type: Raw Resource
-
-  Light Blue Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Light Blue Dye: -1
     - recipe_type: Raw Resource
 
   Yellow Wool:
@@ -1704,6 +1740,60 @@ resources:
         Lime Dye: -1
     - recipe_type: Raw Resource
 
+  Green Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Green Dye: -1
+    - recipe_type: Raw Resource
+
+  Light Blue Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Light Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Cyan Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Cyan Dye: -1
+    - recipe_type: Raw Resource
+
+  Blue Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Purple Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Purple Dye: -1
+    - recipe_type: Raw Resource
+
+  Magenta Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Magenta Dye: -1
+    - recipe_type: Raw Resource
+
   Pink Wool:
     recipes:
     - output: 1
@@ -1711,6 +1801,24 @@ resources:
       requirements:
         White Wool: -1
         Pink Dye: -1
+    - recipe_type: Raw Resource
+
+  Brown Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Brown Dye: -1
+    - recipe_type: Raw Resource
+
+  Black Wool:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        White Wool: -1
+        Black Dye: -1
     - recipe_type: Raw Resource
 
   Gray Wool:
@@ -1729,69 +1837,6 @@ resources:
       requirements:
         White Wool: -1
         Light Gray Dye: -1
-    - recipe_type: Raw Resource
-
-  Cyan Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Cyan Dye: -1
-    - recipe_type: Raw Resource
-
-  Purple Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Purple Dye: -1
-    - recipe_type: Raw Resource
-
-  Blue Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Blue Dye: -1
-    - recipe_type: Raw Resource
-
-  Brown Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Brown Dye: -1
-    - recipe_type: Raw Resource
-
-  Green Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Green Dye: -1
-    - recipe_type: Raw Resource
-
-  Red Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Red Dye: -1
-    - recipe_type: Raw Resource
-
-  Black Wool:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        White Wool: -1
-        Black Dye: -1
     - recipe_type: Raw Resource
 
   Dandelion:
@@ -1847,6 +1892,10 @@ resources:
     - recipe_type: Raw Resource
 
   Spore Blossom:
+    recipes:
+    - recipe_type: Raw Resource
+
+  Pink Petals:
     recipes:
     - recipe_type: Raw Resource
 
@@ -1945,6 +1994,14 @@ resources:
       requirements:
         Birch Planks: -3
     - recipe_type: Raw Resource
+
+  Cherry Slab:
+    recipes:
+    - output: 6
+    recipe_type: Crafting
+      requirements:  
+        Cherry Planks: -3
+    - recipe_type: Raw Reaource
 
   Jungle Slab:
     recipes:
@@ -2232,6 +2289,15 @@ resources:
         Book: -3
     - recipe_type: Raw Resource
 
+  Chiseled Bookshelf:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Planks: -6
+        Any Slabs: -3
+    - recipe_type: Raw Resource
+    
   Mossy Cobblestone:
     recipes:
     - output: 1
@@ -2313,14 +2379,6 @@ resources:
 
     - recipe_type: Raw Resource
 
-  Oak Stairs:
-    recipes:
-    - output: 4
-      recipe_type: Crafting
-      requirements:
-        Oak Planks: -6
-    - recipe_type: Raw Resource
-
   Chest:
     recipes:
     - output: 1
@@ -2335,22 +2393,6 @@ resources:
       recipe_type: Crafting
       requirements:
         Any Planks: -4
-    - recipe_type: Raw Resource
-
-  Farmland:
-    recipes:
-    - output: 1
-      recipe_type: Till
-      requirements:
-        Dirt: -1
-    - output: 1
-      recipe_type: Till
-      requirements:
-        Grass Block: -1
-    - output: 1
-      recipe_type: Till
-      requirements:
-        Dirt Path: -1
     - recipe_type: Raw Resource
 
   Furnace:
@@ -2447,6 +2489,15 @@ resources:
       recipe_type: Crafting
       requirements:
         Birch Planks: -4
+        Stick: -2
+    - recipe_type: Raw Resource
+    
+  Cherry Fence:
+    recipes:
+    - output: 3
+      recipe_type: Crafting
+      requirements:
+        Cherry Planks: -4
         Stick: -2
     - recipe_type: Raw Resource
 
@@ -2569,34 +2620,6 @@ resources:
       recipe_type: Crafting
       requirements:
         Glowstone Dust: -4
-    - recipe_type: Raw Resource
-
-  Infested Stone:
-    recipes:
-    - recipe_type: Raw Resource
-
-  Infested Cobblestone:
-    recipes:
-    - recipe_type: Raw Resource
-
-  Infested Stone Bricks:
-    recipes:
-    - recipe_type: Raw Resource
-
-  Infested Mossy Stone Bricks:
-    recipes:
-    - recipe_type: Raw Resource
-
-  Infested Cracked Stone Bricks:
-    recipes:
-    - recipe_type: Raw Resource
-
-  Infested Chiseled Stone Bricks:
-    recipes:
-    - recipe_type: Raw Resource
-
-  Infested Deepslate:
-    recipes:
     - recipe_type: Raw Resource
 
   Stone Bricks:
@@ -2797,29 +2820,12 @@ resources:
         Stone Bricks: -6
     - recipe_type: Raw Resource
 
-  Mycelium:
-    recipes:
-    - recipe_type: Raw Resource
-
-  Lily Pad:
-    recipes:
-    - recipe_type: Raw Resource
-
   Nether Bricks:
     recipes:
     - output: 1
       recipe_type: Crafting
       requirements:
         Nether Brick: -4
-    - recipe_type: Raw Resource
-
-  Cracked Nether Bricks:
-    recipes:
-    - output: 1
-      recipe_type: Smelting
-      requirements:
-        Nether Bricks: -1
-        Fuel: -1
     - recipe_type: Raw Resource
 
   Chiseled Nether Bricks:
@@ -2863,10 +2869,6 @@ resources:
         Book: -1
         Diamond: -2
         Obsidian: -4
-    - recipe_type: Raw Resource
-
-  End Portal Frame:
-    recipes:
     - recipe_type: Raw Resource
 
   End Stone:
@@ -2913,7 +2915,14 @@ resources:
       requirements:
         Emerald: -9
     - recipe_type: Raw Resource
-
+    
+  Oak Stairs:
+    recipes:
+    - output: 4
+      recipe_type: Crafting
+      requirements:
+        Oak Planks: -6
+    - recipe_type: Raw Resource
   Spruce Stairs:
     recipes:
     - output: 4
@@ -2930,6 +2939,14 @@ resources:
         Birch Planks: -6
     - recipe_type: Raw Resource
 
+  Cherry Stairs:
+    recipes:
+    - output: 4
+      recipe_type: Crafting
+      requirements:
+        Cherry Planks: -6
+    - recipe_type: Raw Resource
+    
   Jungle Stairs:
     recipes:
     - output: 4
@@ -3325,13 +3342,13 @@ resources:
         Any Unsmooth Quartz Block: -6
     - recipe_type: Raw Resource
 
-  White Terracotta:
+  Red Terracotta:
     recipes:
     - output: 8
       recipe_type: Crafting
       requirements:
         Terracotta: -8
-        White Dye: -1
+        Red Dye: -1
     - recipe_type: Raw Resource
 
   Orange Terracotta:
@@ -3341,24 +3358,6 @@ resources:
       requirements:
         Terracotta: -8
         Orange Dye: -1
-    - recipe_type: Raw Resource
-
-  Magenta Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Magenta Dye: -1
-    - recipe_type: Raw Resource
-
-  Light Blue Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Light Blue Dye: -1
     - recipe_type: Raw Resource
 
   Yellow Terracotta:
@@ -3379,6 +3378,60 @@ resources:
         Lime Dye: -1
     - recipe_type: Raw Resource
 
+  Green Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        Green Dye: -1
+    - recipe_type: Raw Resource
+
+  Light Blue Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        Light Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Cyan Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        Cyan Dye: -1
+    - recipe_type: Raw Resource
+
+  Blue Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Purple Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        Purple Dye: -1
+    - recipe_type: Raw Resource
+
+  Magenta Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        Magenta Dye: -1
+    - recipe_type: Raw Resource
+
   Pink Terracotta:
     recipes:
     - output: 8
@@ -3386,6 +3439,33 @@ resources:
       requirements:
         Terracotta: -8
         Pink Dye: -1
+    - recipe_type: Raw Resource
+
+  Brown Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        Brown Dye: -1
+    - recipe_type: Raw Resource
+
+  Black Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        Black Dye: -1
+    - recipe_type: Raw Resource
+
+  White Terracotta:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Terracotta: -8
+        White Dye: -1
     - recipe_type: Raw Resource
 
   Gray Terracotta:
@@ -3406,69 +3486,6 @@ resources:
         Light Gray Dye: -1
     - recipe_type: Raw Resource
 
-  Cyan Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Cyan Dye: -1
-    - recipe_type: Raw Resource
-
-  Purple Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Purple Dye: -1
-    - recipe_type: Raw Resource
-
-  Blue Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Blue Dye: -1
-    - recipe_type: Raw Resource
-
-  Brown Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Brown Dye: -1
-    - recipe_type: Raw Resource
-
-  Green Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Green Dye: -1
-    - recipe_type: Raw Resource
-
-  Red Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Red Dye: -1
-    - recipe_type: Raw Resource
-
-  Black Terracotta:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Terracotta: -8
-        Black Dye: -1
-    - recipe_type: Raw Resource
-
   Hay Bale:
     recipes:
     - output: 1
@@ -3477,12 +3494,17 @@ resources:
         Wheat: -9
     - recipe_type: Raw Resource
 
-  White Carpet:
+  Red Carpet:
     recipes:
     - output: 3
       recipe_type: Crafting
       requirements:
-        White Wool: -2
+        Red Wool: -2
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        White Carpet: -8
+        Red Dye: -1
     - recipe_type: Raw Resource
 
   Orange Carpet:
@@ -3496,32 +3518,6 @@ resources:
       requirements:
         White Carpet: -8
         Orange Dye: -1
-    - recipe_type: Raw Resource
-
-  Magenta Carpet:
-    recipes:
-    - output: 3
-      recipe_type: Crafting
-      requirements:
-        Magenta Wool: -2
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        White Carpet: -8
-        Magenta Dye: -1
-    - recipe_type: Raw Resource
-
-  Light Blue Carpet:
-    recipes:
-    - output: 3
-      recipe_type: Crafting
-      requirements:
-        Light Blue Wool: -2
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        White Carpet: -8
-        Light Blue Dye: -1
     - recipe_type: Raw Resource
 
   Yellow Carpet:
@@ -3547,46 +3543,33 @@ resources:
       recipe_type: Crafting
       requirements:
         White Carpet: -8
-        Lime Dye: -1
+        Lime Blue Dye: -1
     - recipe_type: Raw Resource
 
-  Pink Carpet:
+  Green Carpet:
     recipes:
     - output: 3
       recipe_type: Crafting
       requirements:
-        Pink Wool: -2
+        Green Wool: -2
     - output: 8
       recipe_type: Crafting
       requirements:
         White Carpet: -8
-        Pink Dye: -1
+        Green Dye: -1
     - recipe_type: Raw Resource
 
-  Gray Carpet:
+  Light Blue Carpet:
     recipes:
     - output: 3
       recipe_type: Crafting
       requirements:
-        Gray Wool: -2
+        Light Blue Wool: -2
     - output: 8
       recipe_type: Crafting
       requirements:
         White Carpet: -8
-        Gray Dye: -1
-    - recipe_type: Raw Resource
-
-  Light Gray Carpet:
-    recipes:
-    - output: 3
-      recipe_type: Crafting
-      requirements:
-        Light Gray Wool: -2
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        White Carpet: -8
-        Light Gray Dye: -1
+        Light Blue Dye: -1
     - recipe_type: Raw Resource
 
   Cyan Carpet:
@@ -3599,20 +3582,7 @@ resources:
       recipe_type: Crafting
       requirements:
         White Carpet: -8
-        Cyan Dye: -1 
-    - recipe_type: Raw Resource
-
-  Purple Carpet:
-    recipes:
-    - output: 3
-      recipe_type: Crafting
-      requirements:
-        Purple Wool: -2
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        White Carpet: -8
-        Purple Dye: -1 
+        Cyan Dye: -1
     - recipe_type: Raw Resource
 
   Blue Carpet:
@@ -3625,7 +3595,46 @@ resources:
       recipe_type: Crafting
       requirements:
         White Carpet: -8
-        Blue Dye: -1 
+        Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Purple Carpet:
+    recipes:
+    - output: 3
+      recipe_type: Crafting
+      requirements:
+        Purple Wool: -2
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        White Carpet: -8
+        Purple Dye: -1
+    - recipe_type: Raw Resource
+
+  Magenta Carpet:
+    recipes:
+    - output: 3
+      recipe_type: Crafting
+      requirements:
+        Magenta Wool: -2
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        White Carpet: -8
+        Magenta Dye: -1 
+    - recipe_type: Raw Resource
+
+  Pink Carpet:
+    recipes:
+    - output: 3
+      recipe_type: Crafting
+      requirements:
+        Pink Wool: -2
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        White Carpet: -8
+        Pink Dye: -1 
     - recipe_type: Raw Resource
 
   Brown Carpet:
@@ -3641,32 +3650,6 @@ resources:
         Brown Dye: -1 
     - recipe_type: Raw Resource
 
-  Green Carpet:
-    recipes:
-    - output: 3
-      recipe_type: Crafting
-      requirements:
-        Green Wool: -2
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        White Carpet: -8
-        Green Dye: -1 
-    - recipe_type: Raw Resource
-
-  Red Carpet:
-    recipes:
-    - output: 3
-      recipe_type: Crafting
-      requirements:
-        Red Wool: -2
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        White Carpet: -8
-        Red Dye: -1 
-    - recipe_type: Raw Resource
-
   Black Carpet:
     recipes:
     - output: 3
@@ -3678,6 +3661,40 @@ resources:
       requirements:
         White Carpet: -8
         Black Dye: -1 
+    - recipe_type: Raw Resource
+
+  Gray Carpet:
+    recipes:
+    - output: 3
+      recipe_type: Crafting
+      requirements:
+        Gray Wool: -2
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        White Carpet: -8
+        Gray Dye: -1 
+    - recipe_type: Raw Resource
+
+  Light Gray Carpet:
+    recipes:
+    - output: 3
+      recipe_type: Crafting
+      requirements:
+        Light Gray Wool: -2
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        White Carpet: -8
+        Light Gray Dye: -1 
+    - recipe_type: Raw Resource
+
+  White Carpet:
+    recipes:
+    - output: 3
+      recipe_type: Crafting
+      requirements:
+        White Wool: -2
     - recipe_type: Raw Resource
 
   Terracotta:
@@ -3752,10 +3769,11 @@ resources:
   Rose Bush:
     recipes:
     - recipe_type: Raw Resource
+    
   Peony:
     recipes:
     - recipe_type: Raw Resource
-
+    
   Tallgrass:
     recipes:
     - recipe_type: Raw Resource
@@ -3764,13 +3782,13 @@ resources:
     recipes:
     - recipe_type: Raw Resource
 
-  White Stained Glass:
+  Red Stained Glass:
     recipes:
     - output: 8
       recipe_type: Crafting
       requirements:
         Glass: -8
-        White Dye: -1
+        Red Dye: -1
     - recipe_type: Raw Resource
 
   Orange Stained Glass:
@@ -3780,24 +3798,6 @@ resources:
       requirements:
         Glass: -8
         Orange Dye: -1
-    - recipe_type: Raw Resource
-
-  Magenta Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Magenta Dye: -1
-    - recipe_type: Raw Resource
-
-  Light Blue Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Light Blue Dye: -1
     - recipe_type: Raw Resource
 
   Yellow Stained Glass:
@@ -3818,6 +3818,60 @@ resources:
         Lime Dye: -1
     - recipe_type: Raw Resource
 
+  Green Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        Green Dye: -1
+    - recipe_type: Raw Resource
+
+  Light Blue Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        Light Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Cyan Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        Cyan Dye: -1
+    - recipe_type: Raw Resource
+
+  Blue Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Purple Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        Purple Dye: -1
+    - recipe_type: Raw Resource
+
+  Magenta Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        Magenta Dye: -1
+    - recipe_type: Raw Resource
+
   Pink Stained Glass:
     recipes:
     - output: 8
@@ -3825,6 +3879,33 @@ resources:
       requirements:
         Glass: -8
         Pink Dye: -1
+    - recipe_type: Raw Resource
+
+  Brown Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        Brown Dye: -1
+    - recipe_type: Raw Resource
+
+  Black Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        Black Dye: -1
+    - recipe_type: Raw Resource
+
+  White Stained Glass:
+    recipes:
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass: -8
+        White Dye: -1
     - recipe_type: Raw Resource
 
   Gray Stained Glass:
@@ -3845,80 +3926,17 @@ resources:
         Light Gray Dye: -1
     - recipe_type: Raw Resource
 
-  Cyan Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Cyan Dye: -1
-    - recipe_type: Raw Resource
-
-  Purple Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Purple Dye: -1
-    - recipe_type: Raw Resource
-
-  Blue Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Blue Dye: -1
-    - recipe_type: Raw Resource
-
-  Brown Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Brown Dye: -1
-    - recipe_type: Raw Resource
-
-  Green Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Green Dye: -1
-    - recipe_type: Raw Resource
-
-  Red Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Red Dye: -1
-    - recipe_type: Raw Resource
-
-  Black Stained Glass:
-    recipes:
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass: -8
-        Black Dye: -1
-    - recipe_type: Raw Resource
-
-  White Stained Glass Pane:
+  Red Stained Glass Pane:
     recipes:
     - output: 16
       recipe_type: Crafting
       requirements:
-        White Stained Glass: -6
+        Red Stained Glass: -6
     - output: 8
       recipe_type: Crafting
       requirements:
         Glass Pane: -8
-        White Dye: -1
+        Red Dye: -1
     - recipe_type: Raw Resource
 
   Orange Stained Glass Pane:
@@ -3932,32 +3950,6 @@ resources:
       requirements:
         Glass Pane: -8
         Orange Dye: -1
-    - recipe_type: Raw Resource
-
-  Magenta Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Magenta Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Magenta Dye: -1
-    - recipe_type: Raw Resource
-
-  Light Blue Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Light Blue Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Light Blue Dye: -1
     - recipe_type: Raw Resource
 
   Yellow Stained Glass Pane:
@@ -3986,6 +3978,84 @@ resources:
         Lime Dye: -1
     - recipe_type: Raw Resource
 
+  Green Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        Green Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        Green Dye: -1
+    - recipe_type: Raw Resource
+
+  Light Blue Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        Light Blue Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        Light Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Cyan Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        Cyan Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        Cyan Dye: -1
+    - recipe_type: Raw Resource
+
+  Blue Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        Blue Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Purple Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        Purple Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        Purple Dye: -1
+    - recipe_type: Raw Resource
+
+  Magenta Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        Magenta Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        Magenta Dye: -1
+    - recipe_type: Raw Resource
+
   Pink Stained Glass Pane:
     recipes:
     - output: 16
@@ -3997,6 +4067,45 @@ resources:
       requirements:
         Glass Pane: -8
         Pink Dye: -1
+    - recipe_type: Raw Resource
+
+  Brown Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        Brown Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        Brown Dye: -1
+    - recipe_type: Raw Resource
+
+  Black Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        Black Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        Black Dye: -1
+    - recipe_type: Raw Resource
+
+  White Stained Glass Pane:
+    recipes:
+    - output: 16
+      recipe_type: Crafting
+      requirements:
+        White Stained Glass: -6
+    - output: 8
+      recipe_type: Crafting
+      requirements:
+        Glass Pane: -8
+        White Dye: -1
     - recipe_type: Raw Resource
 
   Gray Stained Glass Pane:
@@ -4023,97 +4132,6 @@ resources:
       requirements:
         Glass Pane: -8
         Light Gray Dye: -1
-    - recipe_type: Raw Resource
-
-  Cyan Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Cyan Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Cyan Dye: -1
-    - recipe_type: Raw Resource
-
-  Purple Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Purple Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Purple Dye: -1
-    - recipe_type: Raw Resource
-
-  Blue Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Blue Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Blue Dye: -1
-    - recipe_type: Raw Resource
-
-  Brown Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Brown Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Brown Dye: -1
-    - recipe_type: Raw Resource
-
-  Green Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Green Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Green Dye: -1
-    - recipe_type: Raw Resource
-
-  Red Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Red Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Red Dye: -1
-    - recipe_type: Raw Resource
-
-  Black Stained Glass Pane:
-    recipes:
-    - output: 16
-      recipe_type: Crafting
-      requirements:
-        Black Stained Glass: -6
-    - output: 8
-      recipe_type: Crafting
-      requirements:
-        Glass Pane: -8
-        Black Dye: -1
     - recipe_type: Raw Resource
 
   Prismarine:
