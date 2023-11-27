@@ -1585,19 +1585,6 @@ resources:
     recipes:
     - recipe_type: Raw Resource
 
-  Sponge:
-    recipes:
-    - recipe_type: Raw Resource
-    - output: 1
-      recipe_type: Smelting
-      requirements:
-        Wet Sponge: -1
-        Fuel: -1
-
-  Wet Sponge:
-    recipes:
-    - recipe_type: Raw Resource
-
   Glass:
     recipes:
     - output: 1
@@ -4294,13 +4281,13 @@ resources:
         Chest: -1
     - recipe_type: Raw Resource
 
-  White Shulker Box:
+  Red Shulker Box:
     recipes:
     - output: 1
       recipe_type: Crafting
       requirements:
         Any Shulker Box: -1
-        White Dye: -1
+        Red Dye: -1
     - recipe_type: Raw Resource
 
   Orange Shulker Box:
@@ -4310,24 +4297,6 @@ resources:
       requirements:
         Any Shulker Box: -1
         Orange Dye: -1
-    - recipe_type: Raw Resource
-
-  Magenta Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Magenta Dye: -1
-    - recipe_type: Raw Resource
-
-  Light Blue Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Light Blue Dye: -1
     - recipe_type: Raw Resource
 
   Yellow Shulker Box:
@@ -4348,6 +4317,60 @@ resources:
         Lime Dye: -1
     - recipe_type: Raw Resource
 
+  Green Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        Green Dye: -1
+    - recipe_type: Raw Resource
+
+  Light Blue Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        Light Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Cyan Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        Cyan Dye: -1
+    - recipe_type: Raw Resource
+
+  Blue Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        Blue Dye: -1
+    - recipe_type: Raw Resource
+
+  Purple Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        Purple Dye: -1
+    - recipe_type: Raw Resource
+
+  Magenta Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        Magenta Dye: -1
+    - recipe_type: Raw Resource
+
   Pink Shulker Box:
     recipes:
     - output: 1
@@ -4355,6 +4378,33 @@ resources:
       requirements:
         Any Shulker Box: -1
         Pink Dye: -1
+    - recipe_type: Raw Resource
+
+  Brown Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        Brown Dye: -1
+    - recipe_type: Raw Resource
+
+  Black Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        Black Dye: -1
+    - recipe_type: Raw Resource
+
+  White Shulker Box:
+    recipes:
+    - output: 1
+      recipe_type: Crafting
+      requirements:
+        Any Shulker Box: -1
+        White Dye: -1
     - recipe_type: Raw Resource
 
   Gray Shulker Box:
@@ -4373,69 +4423,6 @@ resources:
       requirements:
         Any Shulker Box: -1
         Light Gray Dye: -1
-    - recipe_type: Raw Resource
-
-  Cyan Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Cyan Dye: -1
-    - recipe_type: Raw Resource
-
-  Purple Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Purple Dye: -1
-    - recipe_type: Raw Resource
-
-  Blue Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Blue Dye: -1
-    - recipe_type: Raw Resource
-
-  Brown Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Brown Dye: -1
-    - recipe_type: Raw Resource
-
-  Green Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Green Dye: -1
-    - recipe_type: Raw Resource
-
-  Red Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Red Dye: -1
-    - recipe_type: Raw Resource
-
-  Black Shulker Box:
-    recipes:
-    - output: 1
-      recipe_type: Crafting
-      requirements:
-        Any Shulker Box: -1
-        Black Dye: -1
     - recipe_type: Raw Resource
 
   White Glazed Terracotta:
